@@ -55,7 +55,7 @@
   grid-template-columns: max-content max-content;
   
   cursor: pointer;
-  padding: .45rem .78rem;
+  padding: .50rem .78rem;
   margin-bottom: 1rem;
   border-radius: .5rem;
   color: #4f4f4f;
@@ -150,9 +150,9 @@
 }
 
 .active {
-  background-color: #00a295;
+  background-color: rgb(0, 162, 149);
   color: #ffffff;
-  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px 1px rgba(0,0, 0, 0.3);
 }
 
 .active > .nav__icon {

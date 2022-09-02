@@ -24,45 +24,45 @@ class Header extends HTMLElement {
                 </div>
 
                 <div class="nav__list">
-                    <a href="" class="nav__link active nav__active">
+                    <a href="#" class="nav__link active nav__active">
                         <i class="nav__icon icon ion-clipboard " ></i>
                         <span class="nav__name">Dashboard</span>
                     </a>
-                    <a href="" class="nav__link nav__active">
+                    <a href="#" class="nav__link nav__active">
                     <i class="icon ion-android-people nav__icon"></i>
                         <span class="nav__name">Contatos</span>
                     </a>
-                    <a href="" class="nav__link nav__active">
+                    <a href="#" class="nav__link nav__active">
                     <i class="icon ion-ios-box nav__icon"></i>
                         <span class="nav__name">Estoque</span>
                     </a>
-                    <a href="" class="nav__link nav__active">
+                    <a href="#" class="nav__link nav__active">
                     <i class="icon ion-social-dropbox nav__icon"></i>
                         <span class="nav__name">Saídas</span>
                     </a>
-                    <div class="nav__link nav_active nav_collapse">
+                    <div class="nav__link collapse__nav nav__active">
                     <i class="icon ion-person-add nav__icon"></i>
                         <span class="nav__name">Cadastros</span>
                         <i class="icon ion-android-arrow-dropdown collapse__link"></i>
                         <ul class="collapse__menu">
                             <li class="collapse__sublink">
-                                <a href="">Emitente</a>
+                                <a href="#">Emitente</a>
                             </li>
                             <li class="collapse__sublink">
-                                <a href="">Formas de pagamento</a>
+                                <a href="#">Formas de pagamento</a>
                             </li>
                             <li class="collapse__sublink">
-                                <a href="">Funcionários</a>
+                                <a href="#">Funcionários</a>
                             </li>
                             <li class="collapse__sublink">
-                                <a href="">Parcelamento</a>
+                                <a href="#">Parcelamento</a>
                             </li>
                             <hr>
                             <li class="collapse__sublink">
-                                <a href="">Terminais</a>
+                                <a href="#">Terminais</a>
                             </li>
                             <li class="collapse__sublink">
-                                <a href="">Cargos</a>
+                                <a href="#">Cargos</a>
                             </li>
                         </ul>
                     </div>
