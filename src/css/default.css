@@ -1,0 +1,48 @@
+/* Document */
+body {
+    margin: 0;
+    transition: .5s;
+    position: relative;
+    padding: 6rem 0 3rem 6.75rem;
+    font-family: Roboto, sans-serif;
+    background-color: #FCFCFC;
+  }
+  
+  *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+  ::before, ::after {
+      box-sizing: border-box;
+  }
+
+/* Form Fields  */
+  input, select, button, input:focus, select:focus, button:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+  }
+
+  input::placeholder{
+      color: transparent;
+  }
+
+/* List */
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Link */
+  a {
+    text-decoration: none;
+  }
+  
+  /* Lines and columns */
+  hr{
+      color: rgba(0, 0, 0, 0.4);
+  }
+  
