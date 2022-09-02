@@ -1,8 +1,9 @@
 class TopBar extends HTMLElement {
-    connectedCallback() {
+    constructor() {
+        super()
         this.innerHTML = `
-        <div>            
-         {*Top bar code goes here *}         
+        <div id="top-bar" class="top__bar">            
+         {*Top bar stuff *}         
         </div>
       `;
     }
@@ -80,17 +81,6 @@ class Header extends HTMLElement {
     }
 }
 
-class Footer extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `    
-        <footer>            
-          {*footer code goes here *}         
-        </footer>     
-      `;
-    }
-}
-
 
 customElements.define('main-top-bar', TopBar);
 customElements.define('main-header', Header);
-customElements.define('main-footer', Footer);

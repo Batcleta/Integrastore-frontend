@@ -2,6 +2,7 @@
 window.onload = function () {
 
   const toggle = getDomIdElement('nav-toggle')
+  const topbar = getDomIdElement('top-bar')
   const navbar = getDomIdElement('navbar')
   const bodyPadding = getDomIdElement('body-pd')
   const expandedName = queryAll('.nav__name')
@@ -14,6 +15,7 @@ window.onload = function () {
       if(toggle && navbar && bodyPadding){
           toggle.addEventListener('click', () => {
               navbar.classList.toggle('expander')
+              topbar.classList.toggle('top-bar-expander')
               expandedName.forEach(n => n.classList.toggle('expanded-name'))
               expandedLogo.forEach(n => n.classList.toggle('expanded-name'))
               expandedCollapse.forEach(c => c.classList.toggle('expanded-arrow'))

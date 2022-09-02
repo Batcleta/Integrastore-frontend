@@ -1,5 +1,5 @@
 html{
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* Document */
@@ -22,17 +22,6 @@ body {
       box-sizing: border-box;
   }
 
-/* Form Fields  */
-  input, select, button, input:focus, select:focus, button:focus {
-      outline: none;
-      border: none;
-      box-shadow: none;
-  }
-
-  input::placeholder{
-      color: transparent;
-  }
-
 /* List */
   ul {
     margin: 0;
@@ -53,5 +42,22 @@ body {
   .body-pd {
     padding: 6rem 0 3rem 16rem;
   }
+
+  .main__container {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
   
+  .main__container-header h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #626262;
+  }
+
+  .main__container-header hr {
+    margin-top: .6rem;
+    margin-bottom: 3rem;
+    color: #acacac;
+  }
+
   

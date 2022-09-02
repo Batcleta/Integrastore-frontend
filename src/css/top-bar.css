@@ -1,0 +1,17 @@
+.top__bar {
+  position: fixed;
+  top: 0;
+  left: 4.5rem;
+  right: 0;
+  z-index: 5;
+
+  height: 3rem;
+  padding: .9rem;
+  color: white;
+  background-color: #00a095;
+  transition: .5s;
+}
+
+.top-bar-expander {
+  left: calc(4.5rem + 9.25rem);
+}

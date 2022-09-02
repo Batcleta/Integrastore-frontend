@@ -42,6 +42,7 @@
 
 .nav__logo {
   visibility: hidden;
+  margin-right: .5rem;
   opacity: 0;
   transition: .2s cubic-bezier(.12,.65,.5,.91);
 }
