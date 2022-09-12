@@ -1,63 +1,80 @@
-html{
-  font-size: 15px;
+html {
+  font-size: 14px;
 }
 
 /* Document */
 body {
-    margin: 0;
-    transition: .5s;
-    position: relative;
-    padding: 6rem 0 3rem 6.75rem;
-    font-family: Roboto, sans-serif;
-    background-color: #FCFCFC;
-  }
-  
-  *{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-  }
+  margin: 0;
+  transition: .5s;
+  position: relative;
+  padding: 6rem 0 3rem 6.75rem;
+  font-family: Roboto, sans-serif;
+  background-color: #FCFCFC;
+}
 
-  ::before, ::after {
-      box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
 
 /* List */
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  /* Link */
-  a {
-    text-decoration: none;
-  }
-  
-  /* Lines and columns */
-  hr{
-      color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .body-pd {
-    padding: 6rem 0 3rem 16rem;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Link */
+a {
+  text-decoration: none;
+}
+
+/* Lines and columns */
+hr {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* Img */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.body-pd {
+  padding: 6rem 0 3rem 16rem;
+}
+
+.main__container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.main__container-header h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #626262;
+}
+
+.main__container-header hr {
+  margin-top: .6rem;
+  margin-bottom: 3rem;
+  color: #acacac;
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 16px;
+    
   }
 
   .main__container {
-    max-width: 60rem;
+    max-width: 80rem;
     margin: 0 auto;
   }
-  
-  .main__container-header h3 {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #626262;
-  }
-
-  .main__container-header hr {
-    margin-top: .6rem;
-    margin-bottom: 3rem;
-    color: #acacac;
-  }
-
-  
+}

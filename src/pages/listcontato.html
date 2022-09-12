@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="../fonts/ionicons.min.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/top-bar.css">
+    <link rel="stylesheet" href="../css/slide-menu.css">
+    <link rel="stylesheet" href="../css/input-field.css">
+    <link rel="stylesheet" href="../css/filters.css">
+    <link rel="stylesheet" href="../css/listTable.css">
+</head>
+
+<body id="body-pd">
+    <main-top-bar></main-top-bar>
+    <main-header></main-header>
+
+    <div class="main__container">
+        <div class="list__header">
+            <div class="main__list__header">
+                <div class="filter__search__div">
+                    <form action="">
+                        <input type="text" class="search__field" placeholder="pesquise nessa merda" />
+                        <button type="submit"><i class="icon ion-ios-search-strong"></i></button>
+                    </form>
+                </div>
+
+                <div class="add__button__div">
+                    <a href="" class="add__button"> <i class="icon ion-plus"></i>Novo</a>
+                </div>
+            </div>
+            <div class="filter__actived__div">
+                <div class="filter">aviadado <i class="icon ion-close"></i></div>
+                <div class="filter">aviadado <i class="icon ion-close"></i></div>
+                <div class="filter">aviadado <i class="icon ion-close"></i></div>
+            </div>
+        </div>
+        <main class="list__content">
+
+
+            <div class="table">
+                <div class="table__header">
+                    <div class="table__row">
+                        <div class="table__cell">Nome / Razão social</div>
+                        <div class="table__cell">CPF / CNPJ</div>
+                        <div class="table__cell">Nº do Contrato</div>
+                        <div class="table__cell">contato</div>
+                        <div class="table__cell">options</div>
+                    </div>
+                </div>
+                <div class="table__body">
+                    <div class="table__row">
+                        <div class="table__cell">38731</div>
+                        <div class="table__cell">4</div>
+                        <div class="table__cell">4</div>
+                        <div class="table__cell">05/08/2022</div>
+                        <div class="table__cell options"><i class="icon ion-edit"></i><i class="icon ion-trash-a"></i></div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__cell">38732</div>
+                        <div class="table__cell">4</div>
+                        <div class="table__cell">4</div>
+                        <div class="table__cell">17/09/2022</div>
+                        <div class="table__cell options"><i class="icon ion-edit"></i><i class="icon ion-trash-a"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination__container">
+                <ul>
+                    <li>
+                        << </li>
+                    <li>
+                        < </li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>></li>
+                    <li>>></li>
+                </ul>
+            </div>
+        </main>
+
+    </div>
+    <script src="../js/page-componnets.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/slide-menu.js"></script>
+    <script src="../js/input-field.js"></script>
+    <script src="../js/tabs.js"></script>
+
+</body>
+
+</html>

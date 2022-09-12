@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div[arturMyNutsAreStillDry] {
+            width: 60vw;
+            margin: auto;
+        }
+
+        table[arturPorqueFoges] {
+            width: 100%;
+            margin-top: 2rem;
+            margin-bottom: 5rem;
+            text-align: left;
+        }
+
+        tr[acheiQueVcCurtisseCheetos] td,
+        tr[acheiQueVcCurtisseCheetos] th {
+            padding: 1rem;
+        }
+
+        tr[acheiQueVcCurtisseCheetos] th {
+            background-color: rgba(137, 43, 226, 0.116);
+        }
+
+        tr[acheiQueVcCurtisseCheetos]:nth-child(odd) {
+            background-color: rgba(201, 201, 201, 0.116);
+        }
+
+        small[arturSmallMyEgg] {
+            display: block;
+            margin: 1rem 0 0 auto;
+            padding: 1rem;
+            color: aliceblue;
+            background-color: rgb(86, 15, 153);
+            max-width: 250px;
+            border-radius: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: .3s;
+            user-select: none;
+        }
+
+        p[arturSmallMyEgg]:hover {
+            background-color: rgb(121, 30, 206);
+            box-shadow: 5px 5px 10px #00000054;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div arturMyNutsAreStillDry="container">
+        <h1>Append element for USP js dumbs</h1>
+        <h2>This is not a love letter</h2>
+        <small arturSmallMyEgg="saborQueijo">
+            Conhecer novo funcionário
+        </small>
+        <table arturPorqueFoges="?">
+            <thead>
+                <tr acheiQueVcCurtisseCheetos="row">
+                    <th>nome completo</th>
+                    <th>sexo</th>
+                    <th>cor</th>
+                    <th>passa tempo</th>
+                    <th>como?</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="appendContainer">
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+    <script>
+        function myFunction() {
+            // const node = document.createElement("li");
+            // const textnode = document.createTextNode("Water");
+            // node.appendChild(textnode);
+            document.getElementById("myList").innerHTML += `<li>teste</li>`;
+        }
+        // Pega o elemento (pai) onde será adicionado o novo elemento <tbody>
+        const tableBody = document.getElementById('appendContainer')
+        // Pega o atributo referente ao botão de "add novo funcionário"
+        const addNewSlave = document.querySelector('[arturSmallMyEgg]')
+
+        // Objeto totalmente desnecessário que serve como base para o gerador automático
+        // de informações
+        const novoFuncionario = {
+            nome: ["Artur Lambe saco", "ARTUR CHUPA GOSTOSO", 'Artur faltou a esquerda',
+                "artur bumbum guloso", "artur small my egg", "artur garganta profunda",
+                "artur pombinha de jesus", "artur amanha nois toma pilula", "artur amanha é tarde",
+                "artur eu vc dois pais e um cachorro"],
+            sexo: ["Mãe Sexual", "Lhama sutra", "Suruba casual", "tranzando com o bumbum"],
+            cor: ["rosa pink", "rosa choque", "rosê", "arco iris"],
+            passaTempo: ["quebrar cano", "tranzar de costas", "Brincar de tarzão", "ph"],
+            como: ["com a boca", "fazendo pirueta", "com a irmã do elias", "embaixo do seu francisco"]
+        }
+
+        // Função componente que serve para reutilizar o código que faz a pesquisa do objeto array
+        // correspondente dentro de "novoFuncionário" e escolhe uma das informações de forma aleatória
+        // utilizando o resultado do math.random para navegar entre os indices do array
+        const addfuncionario = (campo) => novoFuncionario[campo][Math.floor(Math.random() * novoFuncionario[campo].length)]
+
+
+        // Função que exclui uma linha de dado
+        function excluirFuncionario(event) {
+            tableBody.removeChild(event.target.parentElement.parentElement)
+        }
+
+        // Essa porra eu fiz mas nao funciona
+        function insertAfter(newNode, existingNode) {
+            existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+        }
+
+        // Função que adiciona o field secundário
+        function addColabField(event) {
+            tableBody.innerHTML += `<tr acheiQueVcCurtisseCheetos="row">
+                <td><input type="text" placeholder="o que é o arthue" /></td>
+                    <td><input type="text" placeholder="o que é o arthue" /></td>
+                    <td><input type="text" placeholder="o que é o arthue" /></td>
+                    <td><input type="text" placeholder="o que é o arthue" /></td>
+                    <td><input type="text" placeholder="o que é o arthue" /></td>
+                    <td><small style="cursor:pointer;" arturMeuTaQuaseLa="gato" onClick="addColabField(event)">+</small>
+                        <small style="cursor:pointer;" arturMeuTaQuaseLa="gato" onClick="excluirFuncionario(event)">X</small></td>
+                </tr>`
+        }
+        // Função que adiciona a linha principal
+        addNewSlave?.addEventListener('click', function () {
+            tableBody.innerHTML += `<tr acheiQueVcCurtisseCheetos="row">
+                    <td>${addfuncionario('nome')}</td>
+                    <td>${addfuncionario('sexo')}</td>
+                    <td>${addfuncionario('cor')}</td>
+                    <td>${addfuncionario('passaTempo')}</td>
+                    <td>${addfuncionario('como')}</td>
+                    <td>
+                        <small style="cursor:pointer;" arturMeuTaQuaseLa="gato" onClick="addColabField(event)">+</small>
+                        <small style="cursor:pointer;" arturMeuTaQuaseLa="gato" onClick="excluirFuncionario(event)">X</small>
+                        </td>
+                    </tr>`
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="../fonts/ionicons.min.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/top-bar.css">
+    <link rel="stylesheet" href="../css/slide-menu.css">
+    <link rel="stylesheet" href="../css/input-field.css">
+</head>
+
+<body id="body-pd">
+    <main-top-bar></main-top-bar>
+    <main-header></main-header>
+
+    <div class="main__container">
+
+        <div class="main__container-header">
+            <h3>Cadastro de Produto / Serviço</h3>
+            <hr>
+        </div>
+
+        <form class="form__container">
+            <!-- informações pessoais -->
+            <div class="form__group">
+                <!-- Form inputs -->
+                <div class="m-input form__input__box">
+                    <select class="form__select" required>
+                        <option value="" disabled selected></option>
+                    </select>
+                    <label>Tipo do estoque</label>
+                </div>
+
+                <div class="m-input form__input__box">
+                    <select class="form__select" required>
+                        <option value="" disabled selected></option>
+                    </select>
+                    <label>Tipo do cadastro</label>
+                </div>
+
+                <div class="el-input form__input__box">
+                    <input class="form__input__field" placeholder="w" />
+                    <label>Descrição do item</label>
+                </div>
+
+                <div class="l-input form__input__box">
+                    <div class="field__special__select">
+                        <select class="form__select" required>
+                            <option value="" disabled selected></option>
+                        </select>
+                        <label>Grupo</label>
+                    </div>
+
+                    <div class="field__new__button"><span>+</span></div>
+                </div>
+                <div class="m-input form__input__box">
+                    <div class="field__special__select">
+                        <select class="form__select" required>
+                            <option value="" disabled selected></option>
+                        </select>
+                        <label>Unidade de medida</label>
+                    </div>
+
+                    <div class="field__new__button"><span>+</span></div>
+                </div>
+                <div class="l-input form__input__box">
+                    <input class="form__input__field" placeholder="w" />
+                    <label>Referência</label>
+                </div>
+
+            </div>
+
+            <div class="form__divider">
+                <p>Precificação</p>
+                <hr>
+            </div>
+
+            <div class="form__group">
+                <div class="m-input form__input__box">
+                    <input type="number" class="form__input__field" placeholder="w" />
+                    <label>Preço de custo</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input type="number" class="form__input__field" placeholder="w" />
+                    <label>Preço de venda</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input type="number" class="form__input__field" placeholder="w" />
+                    <label>Preço em dollar</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input type="number" class="form__input__field" placeholder="w" />
+                    <label>Preço de atacado</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input type="number" class="form__input__field" placeholder="w" />
+                    <label>Quantidade para atacado</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input type="number" class="form__input__field" placeholder="w" />
+                    <label>Comissão%</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input type="number" class="form__input__field" placeholder="w" />
+                    <label>Lucro bruto</label>
+                </div>
+            </div>
+
+            <div class="form__divider">
+                <hr>
+            </div>
+
+            <div class="tabs__container">
+                <!-- Tab links -->
+                <div class="tab">
+                    <a href="#" arturlambesaco="produto" class="tablinks tab__active__link">Produto</a>
+                    <a href="#" arturlambesaco="servico" class="tablinks">Serviço</a>
+                    <a href="#" arturlambesaco="adicionais" class="tablinks">Adicionais / Obs</a>
+                    <a href="#" arturlambesaco="serie" class="tablinks">Série</a>
+                    <a href="#" arturlambesaco="grade" class="tablinks">Grade</a>
+                </div>
+
+                <!-- Tab content -->
+                <div id="produto" class="tabcontent tab__active__content">
+                    <div class="tab__group">
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Qtd. em estoque</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Qtd. reservada</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Qtd. mínima</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Peso</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Código de barras</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Balança</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input class="form__input__field" placeholder="w" />
+                            <label>SKU</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>SKU</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>CEST</label>
+                        </div>
+                    </div>
+
+                    <div class="form__divider">
+                        <p>Tributação para NFe</p>
+                        <hr>
+                    </div>
+
+                    <div class="tab__group">
+                        <div class="m-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>CST</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>CSOSN</label>
+                        </div>
+                        <div class="el-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>Taxa ICMS/ISS</label>
+                        </div>
+                    </div>
+
+                    <div class="form__divider">
+                        <p>Tributação para CFe</p>
+                        <hr>
+                    </div>
+
+                    <div class="tab__group">
+                        <div class="m-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>CST</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>CSOSN</label>
+                        </div>
+                        <div class="el-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>Taxa ICMS/ISS</label>
+                        </div>
+                    </div>
+
+                    <div class="form__divider">
+                        <p>Tributação IPI</p>
+                        <hr>
+                    </div>
+
+                    <div class="tab__group">
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>CENQ</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>CST IPI</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input class="form__input__field" placeholder="w" />
+                            <label>Exce. fiscal</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="servico" class="tabcontent">
+                    <div class="tab__group">
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Qtd. em estoque</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Qtd. reservada</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Qtd. mínima</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Peso</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Código de barras</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Balança</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input class="form__input__field" placeholder="w" />
+                            <label>SKU</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>SKU</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>CEST</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="adicionais" class="tabcontent">
+                    <div class="tab__group">
+                        <div class="form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>COFINS %</label>
+                        </div>
+                        <div class="form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>PIS %</label>
+                        </div>
+                        <div class="form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>MVA %</label>
+                        </div>
+                        <div class="form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                                <option value="">Crédito Presumido – Operação de Aquisição Vinculada Exclusivamente a
+                                    Receita de Exportação
+                                </option>
+                            </select>
+                            <label>CST COFINS</label>
+                        </div>
+                        <div class="form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                                <option value="">Crédito Presumido – Operação de Aquisição Vinculada Exclusivamente a
+                                    Receita de Exportação
+                                </option>
+                            </select>
+                            <label>CST PIS</label>
+                        </div>
+                        <div class="l-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>CFOP CFe</label>
+                        </div>
+                        <div class="l-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>CFOP NFe</label>
+                        </div>
+                        <div class="exl-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>ICMS Part</label>
+                        </div>
+                        <div class="el-input form__input__box">
+                            <select class="form__select" required>
+                                <option value="" disabled selected></option>
+                            </select>
+                            <label>Taxa FCP</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Campo 1</label>
+                        </div>
+                        <div class="m-input form__input__box">
+                            <input type="number" class="form__input__field" placeholder="w" />
+                            <label>Campo 2</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="serie" class="tabcontent">
+                    <div class="table">
+                        <div class="table__header">
+                            <div class="table__row">
+                                <div class="table__cell">Num séries</div>
+                                <div class="table__cell">Entradas</div>
+                                <div class="table__cell">Saídas</div>
+                                <div class="table__cell">Validade</div>
+                            </div>
+                        </div>
+                        <div class="table__body">
+                            <div class="table__row">
+                                <div class="table__cell">38731</div>
+                                <div class="table__cell">4</div>
+                                <div class="table__cell">4</div>
+                                <div class="table__cell">05/08/2022</div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">38732</div>
+                                <div class="table__cell">4</div>
+                                <div class="table__cell">4</div>
+                                <div class="table__cell">17/09/2022</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="grade" class="tabcontent">
+                    <div class="table">
+                        <div class="table__header">
+                            <div class="table__row">
+                                <div class="table__cell">Eixo 1</div>
+                                <div class="table__cell">Eixo 2</div>
+                                <div class="table__cell">Qtd. atual</div>
+                                <div class="table__cell">Qtd. reserva</div>
+                            </div>
+                        </div>
+                        <div class="table__body">
+                            <div class="table__row">
+                                <div class="table__cell">Masculino</div>
+                                <div class="table__cell">M</div>
+                                <div class="table__cell">3</div>
+                                <div class="table__cell">1</div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__cell">Feminino</div>
+                                <div class="table__cell">F</div>
+                                <div class="table__cell">2</div>
+                                <div class="table__cell">1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="button__group">
+                <button class="" type="submit">Salvar</button>
+                <button class="">Cancelar</button>
+            </div>
+
+
+        </form>
+
+    </div>
+    <script src="../js/page-componnets.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/slide-menu.js"></script>
+    <script src="../js/input-field.js"></script>
+    <script src="../js/tabs.js"></script>
+
+</body>
+
+</html>

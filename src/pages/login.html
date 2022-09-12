@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="../fonts/ionicons.min.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/input-field.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login__container {
+            display: grid;
+            justify-items: center;
+            max-width: 18rem;
+            margin: auto;
+        }
+
+        .login__company__logo>img {
+            width: 13rem;
+        }
+
+        .login__form__container>h3 {
+            margin: 2rem auto 1.5rem;
+            text-align: center;
+            font-size: 1.3rem;
+            color: rgb(83, 83, 83);
+            font-weight: 500;
+        }
+
+        .login__button {
+            margin-top: 1rem;
+            background-color: #00a295;
+            width: 18rem;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login__container">
+        <div class="login__company__logo">
+            <img src="../img/integra-logo-icon.svg" alt="Logo Integra Store">
+        </div>
+        <div class="login__form__container">
+            <h3>Entre com sua conta aqui</h3>
+            <form class="form__container">
+                <div class="l-input form__input__box">
+                    <input class="form__input__field" placeholder="w" />
+                    <label>Login</label>
+                </div>
+                <div class="l-input form__input__box">
+                    <input type="password" class="form__input__field" placeholder="w" />
+                    <label>Senha</label>
+                    <i class="icon ion-ios-eye pass__icon"></i>
+                    <!-- <i class="icon ion-eye-disabled pass__icon"></i> -->
+                </div>
+                <button class="login__button">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/input-field.js"></script>
+
+</body>
+
+</html>

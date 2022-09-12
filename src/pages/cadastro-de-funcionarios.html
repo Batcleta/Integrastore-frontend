@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="../fonts/ionicons.min.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/top-bar.css">
+    <link rel="stylesheet" href="../css/slide-menu.css">
+    <link rel="stylesheet" href="../css/input-field.css">
+</head>
+
+<body id="body-pd">
+    <main-top-bar></main-top-bar>
+    <main-header></main-header>
+
+    <div class="main__container">
+
+        <div class="main__container-header">
+            <h3>Cadastro de funcionário</h3>
+            <hr>
+        </div>
+
+        <form class="form__container">
+            <!-- informações pessoais -->
+            <div class="form__group">
+                <!-- Cadfunc logo -->
+                <div class="form__photo">
+                    <img src="../img/avatar-default-logo.png" />
+                </div>
+
+                <!-- Form inputs -->
+                <div class="el-input form__input__box">
+                    <input class="form__input__field" placeholder="w" />
+                    <label>Nome</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input id="doc-input" class="form__input__field" placeholder="w" />
+                    <label id="doc-label">CPF / CNPJ</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input id="secdoc-input" class="form__input__field" placeholder="w" />
+                    <label id="secdoc-label">IE / RG</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input id="birth-input" class="form__input__field" placeholder="w" />
+                    <label>Nascimento</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input class="form__input__field" placeholder="w" />
+                    <label>Registro</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input class="form__input__field" placeholder="w" />
+                    <label>Login</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input class="form__input__field" placeholder="w" />
+                    <label>Senha</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input class="form__input__field" placeholder="w" />
+                    <label>Confirmar senha</label>
+                </div>
+            </div>
+
+            <div class="form__divider">
+                <p>Endereço</p>
+                <hr>
+            </div>
+            <!-- Endereço -->
+            <div class="form__group">
+
+                <div class="m-input form__input__box">
+                    <input id="cep-input-search" class="form__input__field" placeholder="w" />
+                    <label>CEP</label>
+                </div>
+                <div class="form__input__box">
+                    <input id="address-type" class="form__input__field" placeholder="w" />
+                    <label>Tipo</label>
+                </div>
+                <div class="el-input form__input__box">
+                    <input id="address-street" class="form__input__field" placeholder="w" />
+                    <label>Logradouro</label>
+                </div>
+                <div class="form__input__box">
+                    <input class="form__input__field" placeholder="w" />
+                    <label>Número</label>
+                </div>
+                <div class="l-input form__input__box">
+                    <input class="form__input__field" placeholder="w" />
+                    <label>Complemento</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input id="address-district" class="form__input__field" placeholder="w" />
+                    <label>Bairro</label>
+                </div>
+                <div class="form__input__box form__select__box">
+                    <select id="address-state" class="form-select" required>
+                        <option value="" disabled selected></option>
+                        <option value="MG">MG</option>
+                        <option value="SP">SP</option>
+                    </select>
+                    <label>UF</label>
+                </div>
+                <div class="m-input form__input__box form__select__box">
+                    <select id="address-city" class="form-select" required>
+                        <option value="" disabled selected></option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Belo Horizonte">Belo Horizonte</option>
+                    </select>
+                    <label>Município</label>
+                </div>
+            </div>
+
+            <div class="form__divider">
+                <p>Contato</p>
+                <hr>
+            </div>
+            <!-- Cotnato -->
+            <div class="form__group">
+                <div class="el-input form__input__box">
+                    <input type="email" class="form__input__field" placeholder="w" />
+                    <label>Email de contato</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input class="phone__field form__input__field" placeholder="w" />
+                    <label>Telefone 1</label>
+                </div>
+                <div class="m-input form__input__box">
+                    <input class="phone__field form__input__field" placeholder="w" />
+                    <label>Telefone 2</label>
+                </div>
+            </div>
+
+            <div class="form__divider">
+                <p>Detalhes e permissões</p>
+                <hr>
+            </div>
+
+            <div class="checkbox__section">
+                <div class="form__check__box">
+                    <input class="form__checkbox" type="checkbox" />
+                    <label class="form-check-label">Cadastros</label>
+                </div>
+
+                <div class="form__check__box">
+                    <input class="form__checkbox" type="checkbox" />
+                    <label class="form-check-label">Estoque</label>
+                </div>
+
+                <div class="form__check__box">
+                    <input class="form__checkbox" type="checkbox" />
+                    <label class="form-check-label">Preferências</label>
+                </div>
+
+                <div class="form__check__box">
+                    <input class="form__checkbox" type="checkbox" />
+                    <label class="form-check-label">Financeiro</label>
+                </div>
+
+                <div class="form__check__box">
+                    <input class="form__checkbox" type="checkbox" />
+                    <label class="form-check-label">Outros</label>
+                </div>
+            </div>
+
+            <div class="button__group">
+                <button class="" type="submit">Salvar</button>
+                <button class="">Cancelar</button>
+            </div>
+
+
+        </form>
+
+    </div>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/slide-menu.js"></script>
+    <script src="../js/page-componnets.js"></script>
+    <script src="../js/input-field.js"></script>
+
+</body>
+
+</html>

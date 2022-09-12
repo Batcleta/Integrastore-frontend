@@ -20,7 +20,7 @@ class Header extends HTMLElement {
                     <!-- colocar icone de menu -->
                     <i id="nav-toggle" class="icon ion-android-menu nav__toggle"></i>
                     <a href="#" class="nav__logo">
-                        <img src="./src/img/integra-logo.svg" alt="logo integra store" srcset="">
+                        <img src="../img/integra-logo.svg" alt="logo integra store" srcset="">
                     </a>
                 </div>
 

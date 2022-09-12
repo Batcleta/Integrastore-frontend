@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70.01" height="60.775" viewBox="0 0 70.01 60.775">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Caminho_2105" data-name="Caminho 2105" d="M3845.441-4925.772h-14.229l22.044-36.758,6.632,11.658Z" fill="none"/>
+    </clipPath>
+    <filter id="Caminho_2103" x="29.124" y="6.88" width="67.72" height="61.01" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1.42" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#09caaa"/>
+      <stop offset="0.251" stop-color="#00c2a4"/>
+      <stop offset="0.469" stop-color="#00c2a4"/>
+      <stop offset="0.728" stop-color="#008287"/>
+      <stop offset="0.833" stop-color="#007580"/>
+      <stop offset="1" stop-color="#004d6e"/>
+    </linearGradient>
+    <clipPath id="clip-path-2">
+      <path id="Caminho_2102" data-name="Caminho 2102" d="M3881.819-4923.547l-8.032,14.021L3860.1-4908.1l-1.619-12.454L3889-4968.88l24.161,29.267-7.348,13.451-6.352,2.615Z" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <filter id="Caminho_450" x="0.321" y="6.103" width="80.108" height="82.564" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path-3">
+      <path id="Caminho_2101" data-name="Caminho 2101" d="M3845.441-4925.79h-14.229l22.044-36.74,6.632,11.651Z" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <filter id="Caminho_450-2" x="-12.212" y="5.88" width="67.72" height="61.01" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_2681" data-name="Grupo 2681" transform="translate(-3851.485 4964.88)">
+    <g id="Grupo_de_máscara_26" data-name="Grupo de máscara 26" transform="translate(61.608 7)" clip-path="url(#clip-path)">
+      <g id="Grupo_2676" data-name="Grupo 2676" transform="translate(3828 -4959)">
+        <g transform="matrix(1, 0, 0, 1, -38.12, -12.88)" filter="url(#Caminho_2103)">
+          <path id="Caminho_2103-2" data-name="Caminho 2103" d="M-1038.952,179.111l-24.982,43.01h49.72l-13.582-23.769h-11.156l8.447,14.458-2.545-.471h-15.107l2.091-1.7,12.45-22.071Z" transform="translate(1102.06 -166.23)" fill="#00446a"/>
+        </g>
+        <path id="Caminho_2104" data-name="Caminho 2104" d="M-1038.952,179.111l-24.982,43.01h49.72l-13.582-23.769h-11.156l11.561,20.05-5.659-6.063h-21.263l8.246-1.7,12.45-22.071Z" transform="translate(1063.933 -179.111)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g id="Grupo_de_máscara_25" data-name="Grupo de máscara 25" transform="translate(-4 4)" clip-path="url(#clip-path-2)">
+      <g id="Grupo_2675" data-name="Grupo 2675" transform="translate(3926.914 -4935.272) rotate(120)">
+        <g transform="matrix(-0.5, -0.87, 0.87, -0.5, 6.61, 78.66)" filter="url(#Caminho_450)">
+          <path id="Caminho_450-3" data-name="Caminho 450" d="M-1039.195,179.111l24.982,43.01h-49.72l13.582-23.769h11.156l-8.447,14.458,2.545-.471h15.107l-2.091-1.7-12.45-22.071Z" transform="translate(-305.42 1044.56) rotate(120)" fill="#00446a"/>
+        </g>
+        <path id="Caminho_451" data-name="Caminho 451" d="M-1039.195,179.111l24.982,43.01h-49.72l13.582-23.769h11.156l-11.561,20.05,5.659-6.063h21.263l-8.246-1.7-12.45-22.071Z" transform="translate(1063.933 -179.111)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g id="Grupo_2677" data-name="Grupo 2677" transform="translate(-6 11)">
+      <g id="Grupo_de_máscara_24" data-name="Grupo de máscara 24" transform="translate(26.273 -5)" clip-path="url(#clip-path-3)">
+        <g id="Grupo_2674" data-name="Grupo 2674" transform="translate(3828 -4959)">
+          <g transform="matrix(1, 0, 0, 1, 3.21, -11.88)" filter="url(#Caminho_450-2)">
+            <path id="Caminho_450-4" data-name="Caminho 450" d="M-1038.952,179.111l-24.982,43.01h49.72l-13.582-23.769h-11.156l8.447,14.458-2.545-.471h-15.107l2.091-1.7,12.45-22.071Z" transform="translate(1060.72 -167.23)" fill="#00446a"/>
+          </g>
+          <path id="Caminho_451-2" data-name="Caminho 451" d="M-1038.952,179.111l-24.982,43.01h49.72l-13.582-23.769h-11.156l11.561,20.05-5.659-6.063h-21.263l8.246-1.7,12.45-22.071Z" transform="translate(1063.933 -179.111)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <path id="Caminho_2106" data-name="Caminho 2106" d="M3881.692-4967.249l5.158,9.523,5.668-9.523-5.387-9.565Z" transform="translate(-1.647 2.162)" fill="#00c2a4"/>
+    </g>
+  </g>
+</svg>

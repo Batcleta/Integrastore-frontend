@@ -16,7 +16,6 @@
 
 .nav {
   display: flex;
-  /* flex-wrap: initial; */
   flex-direction: column;
   justify-content: space-between;
 
@@ -48,7 +47,6 @@
 }
 
 /*  Link section  */
-
 .nav__link {
   display: grid;
   align-items: center;
@@ -60,7 +58,7 @@
   margin-bottom: 1rem;
   border-radius: .5rem;
   color: #4f4f4f;
-  transition: .1s;
+  transition: background-color .2s;
 }
 
 .nav__link:hover {
@@ -86,7 +84,6 @@
 }
 
 /* Collapse menu */
-
 .collapse__nav {
   position: relative;
   grid-template-columns: 1.25rem max-content 1fr;
@@ -162,7 +159,6 @@
 
 
 /* Media queries */
-
 @media (min-width: 1400px) {
   .slide-navbar {
     padding: 1.5rem 1.3rem 2rem;

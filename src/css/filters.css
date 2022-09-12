@@ -1,0 +1,66 @@
+.main__list__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter__search__div form {
+    display: flex;
+    border-radius: 1rem;
+}
+
+.filter__search__div form input {
+    border: 1px solid #cfcfcf;
+    border-radius: 1rem 0 0 1rem;
+    width: 20rem;
+    height: 2.8rem;
+    padding: 1rem 1.2rem;
+}
+
+.filter__search__div form input::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.filter__search__div form button, .add__button__div a {
+    background-color: #00a095;
+    color: white;
+}
+
+.filter__search__div form button {
+    border-radius: 0 1rem 1rem 0;
+    height: 2.8rem;
+    max-width: 4rem;
+}
+
+.filter__search__div form button i {
+    font-size: 1.25rem;
+}
+
+.add__button__div a {
+    padding: .8rem 1rem;
+    border-radius: 1rem;
+    color: white
+}
+
+.add__button__div i {
+    margin-right: 1rem;
+}
+
+.filter__actived__div {
+    margin-top: 2rem;
+    padding: 0 .5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.filter__actived__div .filter {
+    padding: .35rem .6rem;
+    background-color: #ececec;
+    border-radius: .6rem;
+    font-size: .75rem;
+    width: max-content;
+}
+
+.filter__actived__div .filter i {
+    margin-left: .5rem;
+}
