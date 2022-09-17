@@ -170,4 +170,44 @@ window.addEventListener("load", function () {
       }
     })
   );
-});
+
+
+  const numberType = queryAll('[type-number]')
+
+  numberType.forEach(element => {
+    element.addEventListener('keyup', event => {
+      const getOnlyNumber = event.target.value.replace(/-*[^\d.,-]/g, "")
+      if (isNaN(parseFloat(getOnlyNumber))) {
+        return event.target.value = ""
+      }
+      return event.target.value = getOnlyNumber
+
+    })
+
+  })
+
+  const priceTag = queryAll('[price-tag]')
+
+  priceTag.forEach(element => {
+    element.addEventListener('blur', event => {
+      const getOnlyNumber = event.target.value.replace(/-*[^\d.,-]/g, "")
+
+      if (isNaN(parseFloat(getOnlyNumber))) {
+        return event.target.value = ""
+      }
+
+      const formato = { minimumFractionDigits: 4, style: 'currency', currency: 'BRL' }
+      return event.target.value = parseFloat(event.target.value.replace(/,/g, '.')).toLocaleString('pt-BR', formato)
+
+    })
+  })
+
+
+  const percentTag = queryAll('[percent-tag')
+
+  percentTag.forEach(element => {
+    element.addEventListener('blur', event => {
+      return event.target.value = event.target.value += '%'
+    })
+  })
+})
