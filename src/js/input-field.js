@@ -3,10 +3,26 @@ window.addEventListener("load", function () {
   const mainDocLabel = getDomIdElement("doc-label");
   const secDocField = getDomIdElement("secdoc-input");
   const secDocLabel = getDomIdElement("secdoc-label");
-  const birthdayField = getDomIdElement("birth-input");
-  const phoneField = queryAll(".phone__field");
 
-  // Change label of mainDocLabel and secDocLabel
+  const birthdayField = getDomIdElement("birth-input");
+  const phoneNumberField = queryAll(".phone__field");
+
+  const numberTypeField = queryAll('[type-number]')
+  const priceTagField = queryAll('[price-tag]')
+  const percentTagField = queryAll('[percent-tag')
+
+  const formInputContainer = queryAll('.form__input__box')
+  // PASSWORD DOM FIELD
+  const togglePass = queryAll(".pass__icon");
+  // GET CEP DOM FIELDS
+  const cepSearch = getDomIdElement("cep-input-search");
+  const addressType = getDomIdElement("address-type");
+  const street = getDomIdElement("address-street");
+  const district = getDomIdElement("address-district");
+  const state = getDomIdElement("address-state");
+  const city = getDomIdElement("address-city");
+
+  // DOC LABEL CHANGE
   function mainDocLabelChange(docType) {
     switch (docType) {
       case "pessoa física":
@@ -26,7 +42,7 @@ window.addEventListener("load", function () {
     }
   }
 
-  //  Main doc input masking function
+  // MASKING MAIN DOC INPUT VALUE
   function formatCnpjCpf(event, labelChanger) {
     const value = (action = undefined) => (event.target.value = action);
     const cnpjCpf = event.target.value.replace(/\D/g, "");
@@ -50,7 +66,11 @@ window.addEventListener("load", function () {
     );
   }
 
-  // Sec doc input masking function
+  mainDocField?.addEventListener("blur", (event) =>
+    formatCnpjCpf(event, mainDocLabelChange)
+  );
+
+  // MASKING SECOUND DOC INPUT VALUE
   function formatRgIe(event) {
     const value = (action = undefined) => (event.target.value = action);
     const rgIe = event.target.value.replace(/\D/g, "");
@@ -66,24 +86,18 @@ window.addEventListener("load", function () {
     return value(rgIe);
   }
 
-  // Masking main doc input value
-  mainDocField?.addEventListener("blur", (event) =>
-    formatCnpjCpf(event, mainDocLabelChange)
-  );
-
-  // Masking sec doc input value
   secDocField?.addEventListener("blur", (event) => formatRgIe(event));
 
-  // Masking birth date input value
+  // MASKING BIRTH DATE INPUT VALUE
   birthdayField?.addEventListener("blur", (event) => {
     return (event.target.value = event.target.value
       .replace(/\D/g, "")
       .replace(/(\d{2})(\d{2})(\d{4})$/, "$1/$2/$3"));
   });
 
-  // Masking phone number input value
-  phoneField?.forEach((element) =>
-    element.addEventListener("blur", (event) => {
+  // MASKING PHONE NUMBER INPUT VALUE
+  phoneNumberField?.forEach((element) =>
+    element?.addEventListener("blur", (event) => {
       const value = (action = undefined) => (event.target.value = action);
       const phone = event.target.value.replace(/\D/g, "");
       if (phone.length === 10) {
@@ -93,14 +107,7 @@ window.addEventListener("load", function () {
     })
   );
 
-  // get CEP ==============================>
-  const cepSearch = getDomIdElement("cep-input-search");
-  const addressType = getDomIdElement("address-type");
-  const street = getDomIdElement("address-street");
-  const district = getDomIdElement("address-district");
-  const state = getDomIdElement("address-state");
-  const city = getDomIdElement("address-city");
-
+  // GET CEP FUNCTION FROM VIACEP API
   function getCep(event) {
     const searchValue = event.target.value.split("-").join("");
     const value = (action = undefined) => (event.target.value = action);
@@ -132,16 +139,14 @@ window.addEventListener("load", function () {
     city.value = "";
     return;
   }
+
   cepSearch?.addEventListener("blur", function (event) {
     getCep(event);
   });
 
-  // end of get CEP ==============================>
-
-  const togglePass = queryAll(".pass__icon");
-
-  togglePass.forEach((element) =>
-    element.addEventListener("click", (event) => {
+  // TOGGLE CHANGE INPUT FIELD FROM PASSWORD TO NAME
+  togglePass?.forEach((element) =>
+    element?.addEventListener("click", (event) => {
       const inputElement =
         event.target.previousElementSibling.previousElementSibling;
       const toggleButton = event.target;
@@ -171,11 +176,9 @@ window.addEventListener("load", function () {
     })
   );
 
-
-  const numberType = queryAll('[type-number]')
-
-  numberType.forEach(element => {
-    element.addEventListener('keyup', event => {
+  // ENSURE NUMBERTYPEFIELD ONLY HAVE NUMBERS COMMA AND DOT
+  numberTypeField?.forEach(element => {
+    element?.addEventListener('keyup', event => {
       const getOnlyNumber = event.target.value.replace(/-*[^\d.,-]/g, "")
       if (isNaN(parseFloat(getOnlyNumber))) {
         return event.target.value = ""
@@ -186,10 +189,9 @@ window.addEventListener("load", function () {
 
   })
 
-  const priceTag = queryAll('[price-tag]')
-
-  priceTag.forEach(element => {
-    element.addEventListener('blur', event => {
+  // CONVERT THE NUMBER VALUE INTO LOCAL CURRENCY
+  priceTagField?.forEach(element => {
+    element?.addEventListener('blur', event => {
       const getOnlyNumber = event.target.value.replace(/-*[^\d.,-]/g, "")
 
       if (isNaN(parseFloat(getOnlyNumber))) {
@@ -202,12 +204,25 @@ window.addEventListener("load", function () {
     })
   })
 
+  // ADD % AT THE END OF THE FIELD VALUE
+  percentTagField?.forEach(element => {
+    element?.addEventListener('blur', event => {
+      const getOnlyNumber = event.target.value.replace(/-*[^\d.,-]/g, "")
 
-  const percentTag = queryAll('[percent-tag')
+      if (isNaN(parseFloat(getOnlyNumber))) {
+        return event.target.value = ""
+      }
 
-  percentTag.forEach(element => {
-    element.addEventListener('blur', event => {
       return event.target.value = event.target.value += '%'
     })
   })
+
+  // PUT A DOWN ARROW TO ALL SELECTS MAIN PARENT ELEMENT
+  const getParent = [...formInputContainer].filter(element => {
+    let selectDirectChild = element.children[0]?.classList.contains('form__select')
+    let selectGrandChild = element.children[0].children[0]?.classList.contains('form__select')
+    return selectDirectChild += selectGrandChild
+  })
+
+  getParent?.forEach(element => element?.classList.add('arrow'))
 })
