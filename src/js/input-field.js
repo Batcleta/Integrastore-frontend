@@ -218,11 +218,14 @@ window.addEventListener("load", function () {
   })
 
   // PUT A DOWN ARROW TO ALL SELECTS MAIN PARENT ELEMENT
-  const getParent = [...formInputContainer].filter(element => {
-    let selectDirectChild = element.children[0]?.classList.contains('form__select')
-    let selectGrandChild = element.children[0].children[0]?.classList.contains('form__select')
-    return selectDirectChild += selectGrandChild
+  const selectDirectChild = [...formInputContainer].filter(element => {
+    return element.children[0]?.classList.contains('form__select')
   })
 
-  getParent?.forEach(element => element?.classList.add('arrow'))
+  const selectGrandChild = [...formInputContainer].filter(element => {
+    return element.children[0].children[0]?.classList.contains('form__select')
+  })
+
+  selectDirectChild?.forEach(element => element?.classList.add('arrow'))
+  selectGrandChild?.forEach(element => element?.classList.add('special__arrow'))
 })

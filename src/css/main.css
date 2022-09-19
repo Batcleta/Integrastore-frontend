@@ -1,0 +1,91 @@
+input, select, button, input:focus, select:focus, button:focus { outline: none; border: none; box-shadow: none; }
+
+select, [type=number] { appearance: none; -webkit-appearance: none; -moz-appearance: none; }
+
+input::placeholder { color: transparent; }
+
+input:not([type=checkbox]), select { background: transparent; width: 100%; }
+
+.m-input { grid-column: span 2; }
+
+.l-input { grid-column: span 3; }
+
+.el-input { grid-column: span 4; }
+
+.exl-input { grid-column: span 5; }
+
+.form__photo { grid-column: span 2; grid-row: span 3; width: 85%; opacity: .6; }
+
+/* Form components */
+.form__divider p { margin-top: 1.5rem; font-weight: 400; font-size: .85rem; color: #555555; }
+
+.form__divider hr { margin-top: .3rem; margin-bottom: .2rem; border: 1px solid #e9e9e9; }
+
+.form__container { display: grid; row-gap: 1rem; }
+
+.form__group { display: grid; grid-template-columns: repeat(8, 1fr); gap: 1rem; }
+
+.form__input__box { position: relative; height: 3rem; }
+
+.form__input__box label { position: absolute; top: .9rem; left: .9rem; padding: 0 .25rem; font-size: .95rem; color: #989898; transition: .3s; }
+
+.form__input__box input, .form__input__box select { position: absolute; z-index: 1; top: 0; left: 0; padding: .9rem; font-size: .95rem; color: #4f4f4f; background-color: rgba(0, 0, 0, 0.05); border-bottom: 1px solid transparent; transition: .3s; }
+
+.form__input__box i { position: absolute; right: 1rem; top: .5rem; font-size: 1.8rem; color: #929292; cursor: pointer; z-index: 99; }
+
+.arrow:after { position: absolute; top: 18px; width: 0; height: 0; padding: 0; content: ''; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid rgba(0, 0, 0, 0.2); pointer-events: none; right: 1rem; }
+
+.special__arrow:after { position: absolute; top: 18px; width: 0; height: 0; padding: 0; content: ''; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid rgba(0, 0, 0, 0.2); pointer-events: none; right: 3.2rem; }
+
+.field__special__select { position: relative; width: calc(100% - 2.5rem); }
+
+.field__new__button { user-select: none; box-sizing: border-box; position: absolute; right: 0; width: 2.5rem; font-size: 1rem; padding: .92rem; background-color: #00bdad; color: white; cursor: pointer; transition: .3s; }
+
+.field__new__button:hover { background-color: #00a295; }
+
+.form__input__box input:focus, .form__input__box select:focus, .form__input__box select:valid, .form__input__field:not(:placeholder-shown).form__input__field:not(:focus) { border-bottom: 1px solid #00a295; background-color: rgba(0, 0, 0, 0.01); }
+
+.form__input__box input:focus + label, .form__input__box select:focus + label, .form__input__box select:valid + label, .form__input__field:not(:placeholder-shown).form__input__field:not(:focus) + label { top: -.5rem; left: .3rem; color: #00a295; font-size: .75rem; font-weight: 500; z-index: 10; }
+
+#doc-button { position: absolute; bottom: -1.1rem; left: .5rem; font-size: .7rem; user-select: none; cursor: pointer; z-index: 5; transition: .3s; }
+
+.checkbox__section { display: flex; gap: 1rem; }
+
+.button__group { display: flex; justify-content: end; gap: 1rem; margin-top: 3rem; }
+
+.button__group button { cursor: pointer; width: 8.75rem; height: 2.5rem; border: none; transition: .3s; }
+
+.button__group button:hover { box-shadow: 3px 3px 5px rgba(79, 79, 79, 0.5); }
+
+.button__group button:nth-child(1) { background-color: #00a295; color: white; }
+
+.button__group button:nth-child(2) { background-color: #c5c5c5; color: #4f4f4f; }
+
+/* Tabs - separar depois */
+.tabs__container { margin-top: 1rem; }
+
+.tab { overflow: hidden; display: flex; }
+
+.tab a { display: block; padding: 14px 16px; transition: 0.3s; color: #7e7e7e; font-weight: 500; }
+
+.tab a:hover { background-color: #ddd; }
+
+.tabcontent { display: none; border-top: none; padding: 1.5rem 1rem; box-shadow: 2px 2px 10px #7e7e7e63; row-gap: 1rem; }
+
+.tab__group { display: grid; grid-template-columns: repeat(8, 1fr); gap: 1rem; }
+
+.tab__active__content { display: grid; }
+
+.tab__active__link { border-bottom: 4px solid #00bdad; color: #00a295 !important; /* Table */ }
+
+.table { display: table; width: 100%; }
+
+.table__header { display: table-header-group; background-color: #00a2941a; font-weight: 600; color: #353535; font-size: 1rem; }
+
+.table__body { display: table-row-group; }
+
+.table__row { display: table-row; }
+
+.table__row:nth-child(even) { background-color: #c5c5c515; }
+
+.table__cell { display: table-cell; padding: 10px; text-align: justify; }
