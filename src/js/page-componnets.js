@@ -26,7 +26,7 @@ class Header extends HTMLElement {
 
                 <div class="nav__list">
                     <a href="#" class="nav__link active nav__active">
-                        <i class="nav__icon icon ion-clipboard " ></i>
+                        <i class="nav__icon icon ion-clipboard" ></i>
                         <span class="nav__name">Dashboard</span>
                     </a>
                     <a href="#" class="nav__link nav__active">

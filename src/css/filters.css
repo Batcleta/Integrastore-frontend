@@ -18,7 +18,7 @@
 }
 
 .filter__search__div form input::placeholder {
-    color: rgba(0, 0, 0, 0.2);
+    color: #00000033;
 }
 
 .filter__search__div form button, .add__button__div a {

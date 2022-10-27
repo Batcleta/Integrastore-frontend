@@ -23,77 +23,77 @@ window.addEventListener("load", function () {
   const city = getDomIdElement("address-city");
 
   // DOC LABEL CHANGE
-  function mainDocLabelChange(docType) {
-    switch (docType) {
-      case "pessoa física":
-        mainDocLabel.innerText = "CPF";
-        secDocLabel.innerText = "RG";
-        break;
+  // function mainDocLabelChange(docType) {
+  //   switch (docType) {
+  //     case "pessoa física":
+  //       mainDocLabel.innerText = "CPF";
+  //       secDocLabel.innerText = "RG";
+  //       break;
 
-      case "pessoa jurídica ":
-        mainDocLabel.innerText = "CNPJ";
-        secDocLabel.innerText = "IE";
-        break;
+  //     case "pessoa jurídica ":
+  //       mainDocLabel.innerText = "CNPJ";
+  //       secDocLabel.innerText = "IE";
+  //       break;
 
-      default:
-        mainDocLabel.innerText = "CPF / CNPJ";
-        secDocLabel.innerText = "IE / RG";
-        break;
-    }
-  }
+  //     default:
+  //       mainDocLabel.innerText = "CPF / CNPJ";
+  //       secDocLabel.innerText = "IE / RG";
+  //       break;
+  //   }
+  // }
 
   // MASKING MAIN DOC INPUT VALUE
-  function formatCnpjCpf(event, labelChanger) {
-    const value = (action = undefined) => (event.target.value = action);
-    const cnpjCpf = event.target.value.replace(/\D/g, "");
+  // function formatCnpjCpf(event, labelChanger) {
+  //   const value = (action = undefined) => (event.target.value = action);
+  //   const cnpjCpf = event.target.value.replace(/\D/g, "");
 
     // fazer um menor que 11 e maior que 13
-    if (cnpjCpf.length === 0) {
-      labelChanger();
-      return value(cnpjCpf);
-    }
+    // if (cnpjCpf.length === 0) {
+    //   labelChanger();
+    //   return value(cnpjCpf);
+    // }
 
-    if (cnpjCpf.length === 11) {
-      labelChanger("pessoa física");
-      return value(
-        cnpjCpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, "$1.$2.$3-$4")
-      );
-    }
+    // if (cnpjCpf.length === 11) {
+    //   labelChanger("pessoa física");
+    //   return value(
+    //     cnpjCpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, "$1.$2.$3-$4")
+    //   );
+    // }
 
-    labelChanger("pessoa jurídica");
-    return value(
-      cnpjCpf.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g, "$1.$2.$3/$4-$5")
-    );
+    // labelChanger("pessoa jurídica");
+    // return value(
+    //   cnpjCpf.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g, "$1.$2.$3/$4-$5")
+    // );
   }
 
-  mainDocField?.addEventListener("blur", (event) =>
-    formatCnpjCpf(event, mainDocLabelChange)
-  );
+  // mainDocField?.addEventListener("blur", (event) =>
+  //   formatCnpjCpf(event, mainDocLabelChange)
+  // );
 
   // MASKING SECOUND DOC INPUT VALUE
-  function formatRgIe(event) {
-    const value = (action = undefined) => (event.target.value = action);
-    const rgIe = event.target.value.replace(/\D/g, "");
+  // function formatRgIe(event) {
+  //   const value = (action = undefined) => (event.target.value = action);
+  //   const rgIe = event.target.value.replace(/\D/g, "");
 
-    // fazer um menor que 11 e maior que 13
+  //   // fazer um menor que 11 e maior que 13
 
-    if (rgIe.length === 9) {
-      return value(
-        rgIe.replace(/(\d{2})(\d{3})(\d{3})(\d{1})$/, "$1.$2.$3-$4")
-      );
-    }
+  //   if (rgIe.length === 9) {
+  //     return value(
+  //       rgIe.replace(/(\d{2})(\d{3})(\d{3})(\d{1})$/, "$1.$2.$3-$4")
+  //     );
+  //   }
 
-    return value(rgIe);
-  }
+  //   return value(rgIe);
+  // }
 
-  secDocField?.addEventListener("blur", (event) => formatRgIe(event));
+  // secDocField?.addEventListener("blur", (event) => formatRgIe(event));
 
   // MASKING BIRTH DATE INPUT VALUE
-  birthdayField?.addEventListener("blur", (event) => {
-    return (event.target.value = event.target.value
-      .replace(/\D/g, "")
-      .replace(/(\d{2})(\d{2})(\d{4})$/, "$1/$2/$3"));
-  });
+  // birthdayField?.addEventListener("blur", (event) => {
+  //   return (event.target.value = event.target.value
+  //     .replace(/\D/g, "")
+  //     .replace(/(\d{2})(\d{2})(\d{4})$/, "$1/$2/$3"));
+  // });
 
   // MASKING PHONE NUMBER INPUT VALUE
   phoneNumberField?.forEach((element) =>
@@ -108,41 +108,41 @@ window.addEventListener("load", function () {
   );
 
   // GET CEP FUNCTION FROM VIACEP API
-  function getCep(event) {
-    const searchValue = event.target.value.split("-").join("");
-    const value = (action = undefined) => (event.target.value = action);
+  // function getCep(event) {
+  //   const searchValue = event.target.value.split("-").join("");
+  //   const value = (action = undefined) => (event.target.value = action);
 
-    if (searchValue) {
-      let responseData;
-      const url = `https://viacep.com.br/ws/${searchValue
-        .split("-")
-        .join()}/json/`;
-      const getOptions = { method: "GET" };
+  //   if (searchValue) {
+  //     let responseData;
+  //     const url = `https://viacep.com.br/ws/${searchValue
+  //       .split("-")
+  //       .join()}/json/`;
+  //     const getOptions = { method: "GET" };
 
-      fetch(url, getOptions)
-        .then((resp) => (responseData = resp.json()))
-        .then((data) => {
-          addressType.value = data.logradouro.split(" ")[0];
-          street.value = data.logradouro;
-          district.value = data.bairro;
-          state.value = data.uf;
-          city.value = data.localidade;
-        })
-        .catch((err) => console.log(err));
-      return value(searchValue.replace(/(\d{5})(\d{3})/g, "$1-$2"));
-    }
+  //     fetch(url, getOptions)
+  //       .then((resp) => (responseData = resp.json()))
+  //       .then((data) => {
+  //         addressType.value = data.logradouro.split(" ")[0];
+  //         street.value = data.logradouro;
+  //         district.value = data.bairro;
+  //         state.value = data.uf;
+  //         city.value = data.localidade;
+  //       })
+  //       .catch((err) => console.log(err));
+  //     return value(searchValue.replace(/(\d{5})(\d{3})/g, "$1-$2"));
+  //   }
 
-    addressType.value = "";
-    street.value = "";
-    district.value = "";
-    state.value = "";
-    city.value = "";
-    return;
-  }
+  //   addressType.value = "";
+  //   street.value = "";
+  //   district.value = "";
+  //   state.value = "";
+  //   city.value = "";
+  //   return;
+  // }
 
-  cepSearch?.addEventListener("blur", function (event) {
-    getCep(event);
-  });
+  // cepSearch?.addEventListener("blur", function (event) {
+  //   getCep(event);
+  // });
 
   // TOGGLE CHANGE INPUT FIELD FROM PASSWORD TO NAME
   togglePass?.forEach((element) =>

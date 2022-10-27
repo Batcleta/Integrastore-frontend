@@ -1,7 +1,7 @@
-input,
+/* input, */
 select,
 button,
-input:focus,
+/* input:focus, */
 select:focus,
 button:focus {
   outline: none;
@@ -15,9 +15,9 @@ select, [type=number] {
   -moz-appearance: none;
 }
 
-input::placeholder {
+/* input::placeholder {
   color: transparent;
-}
+} */
 
 input:not([type=checkbox]),
 select {
@@ -25,7 +25,7 @@ select {
   width: 100%;
 }
 
-.m-input {
+/* .m-input {
   grid-column: span 2;
 }
 
@@ -39,17 +39,17 @@ select {
 
 .exl-input {
   grid-column: span 5;
-}
+} */
 
-.form__photo {
+/* .form__photo {
   grid-column: span 2;
   grid-row: span 3;
   width: 85%;
   opacity: .6;
-}
+} */
 
 /* Form components */
-.form__divider p {
+/* .form__divider p {
   margin-top: 1.5rem;
   font-weight: 400;
   font-size: .85rem;
@@ -60,9 +60,9 @@ select {
   margin-top: .3rem;
   margin-bottom: .2rem;
   border: 1px solid #e9e9e9;
-}
+} */
 
-.form__container {
+/* .form__container {
   display: grid;
   row-gap: 1rem;
 }
@@ -71,9 +71,9 @@ select {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 1rem;
-}
+} */
 
-.form__input__box {
+/* .form__input__box {
   position: relative;
   height: 3rem;
 }
@@ -86,9 +86,9 @@ select {
   font-size: .95rem;
   color: #989898;
   transition: .3s;
-}
+} */
 
-.form__input__box input,
+/* .form__input__box input,
 .form__input__box select {
   position: absolute;
   z-index: 1;
@@ -100,9 +100,9 @@ select {
   background-color: rgb(0, 0, 0, 0.05);
   border-bottom: 1px solid transparent;
   transition: .3s;
-}
+} */
 
-.form__input__box i{
+/* .form__input__box i{
   position: absolute;
   right: 1rem;
   top: .5rem;
@@ -110,9 +110,9 @@ select {
   color: #929292;
   cursor: pointer;
   z-index: 99;
-}
+} */
 
-.arrow:after {
+/* .arrow:after {
 	position: absolute;
 	top: 18px;
 	right: 10px;
@@ -124,7 +124,7 @@ select {
 	border-right: 6px solid transparent;
 	border-top: 6px solid rgba(0, 0, 0, 0.2);
 	pointer-events: none;
-}
+} */
 
 .special__arrow:after {
 	position: absolute;
@@ -163,15 +163,15 @@ select {
   background-color: #00a295;
 }
 
-.form__input__box input:focus,
+/* .form__input__box input:focus,
 .form__input__box select:focus,
 .form__input__box select:valid,
 .form__input__field:not(:placeholder-shown).form__input__field:not(:focus) {
   border-bottom: 1px solid rgba(0, 162, 149, 1);
   background-color: rgb(0, 0, 0, 0.01);
-}
+} */
 
-.form__input__box input:focus+label,
+/* .form__input__box input:focus+label,
 .form__input__box select:focus+label,
 .form__input__box select:valid+label,
 .form__input__field:not(:placeholder-shown).form__input__field:not(:focus)+label {
@@ -181,7 +181,7 @@ select {
   font-size: .75rem;
   font-weight: 500;
   z-index: 10;
-}
+} */
 
 #doc-button {
   position: absolute;
@@ -200,7 +200,7 @@ select {
   gap: 1rem;
 }
 
-.button__group {
+/* .button__group {
   display: flex;
   justify-content: end;
   gap: 1rem;
@@ -227,7 +227,7 @@ button:hover {
 .button__group button:nth-child(2) {
   background-color: #c5c5c5;
   color: #4f4f4f;
-}
+} */
 
 
 /* Tabs - separar depois */
@@ -278,7 +278,7 @@ button:hover {
 
 /* Table */
 
-.table {
+/* .table {
   display: table;
   width: 100%;
 }
@@ -308,4 +308,4 @@ button:hover {
   display: table-cell;
   padding: 10px;
   text-align: justify;
-}
+} */
